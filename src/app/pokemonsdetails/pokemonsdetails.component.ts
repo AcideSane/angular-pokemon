@@ -12,16 +12,16 @@ export class PokemonsdetailsComponent implements OnInit {
   idPokemonSeleccionado: number;
   pokemonSeleccionado: Pokemon;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private PokemonService: PokemonService) { }
 
-  ngOnInit(private route: ActivatedRoute, private PokemonService: PokemonService) {
+  ngOnInit() {
 
     this.route.paramMap.subscribe(
       params => (this.idPokemonSeleccionado = +params.get("pokemonId"))
     );
 
     this.PokemonService.getPokemonById(this.idPokemonSeleccionado)
-          .subscribe(aluno => {this.pokemonSeleccionado = Pokemon.results[0];
+          .subscribe(Pokemon => {this.pokemonSeleccionado = Pokemon;
           console.log(this.pokemonSeleccionado);});
   }
 
