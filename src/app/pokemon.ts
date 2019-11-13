@@ -3,9 +3,7 @@ export class Pokemon {
   url:string;
   next:string;
   previous:string;
-  forms:{
-    name:string,
-  }
+  name:string;
   sprites:{
     front_default:string,
     front_shiny:string,

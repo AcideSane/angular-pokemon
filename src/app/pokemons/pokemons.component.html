@@ -1,7 +1,7 @@
 <div>
         <ul style="list-style-type:none">
           <li *ngFor="let pokemon of pokemons; index as id" style="text-align:justify;">
-            <a  [title]="pokemon.name" >{{pokemon.url.split('/')[6]}} - {{pokemon.name}}</a><br/>
+            <div>{{pokemon.url.split('/')[6]}} -<a  [title]="pokemon.name" [routerLink]="['/pokemons',id+1]" >{{pokemon.name}}</a><br/></div>
 
             <!-- [routerLink]="['/pokemons', id]" -->
         </ul>

@@ -13,15 +13,15 @@ export class PokemonsComponent implements OnInit {
   constructor(private PokemonService: PokemonService) { }
 
   ngOnInit() {
-    this.getPokemon();
+    this.getPokemons();
   }
 
  selectPokemon(pokemon:Pokemon) {
     this.PokemonService.setPokemon(pokemon);
   }
 
-  getPokemon(){
-  this.PokemonService.getPokemon()
+  getPokemons(): void {
+  this.PokemonService.getPokemons()
                     .subscribe(dados => {this.pokemons = dados.results;});
                   }
 }
