@@ -5,13 +5,18 @@ import { Pokemon, Stats} from './pokemon';
 
 @Injectable()
 export class PokemonService {
-  
+   private pokemonSeleccionado = new BehaviorSubject(null);
   private apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
 
-  constructor(private http : HttpClient) { }
-  
-    getPokemon(url:string = this.apiUrl){
-    return this.http.get<Pokemon[]>(url + '?limit=151');
+  constructor(private http : HttpClient) { 
+
   }
-  
+
+  getPokemons(): Observable<Pokemon[]>{
+    return this.http.get<Pokemon[]>(this.apiUrl + '?limit=151');
+  }
+
+  setPokemon(pokemon): void {    
+    this.pokemonSeleccionado.next(pokemon);
+  }
 }
