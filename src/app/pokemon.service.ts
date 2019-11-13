@@ -13,7 +13,7 @@ export class PokemonService {
   }
 
   getPokemons(): Observable<Pokemon[]>{
-    return this.http.get<Pokemon[]>(this.apiUrl + '?limit=151');
+    return this.http.get<Pokemon[]>(this.apiUrl + '?limit=807');
   }
 
   getPokemonById(id: number): Observable<Pokemon> {

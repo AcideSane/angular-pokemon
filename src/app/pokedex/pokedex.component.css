@@ -1,0 +1,13 @@
+.firebrick{
+  background-color: firebrick;
+  height: 123px;
+  z-index: 10;
+  width:100%;
+  text-align: center;
+  position:fixed;
+}
+
+img{
+  margin: 11.5px;
+}
+
