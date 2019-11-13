@@ -16,6 +16,11 @@ export class PokemonService {
     return this.http.get<Pokemon[]>(this.apiUrl + '?limit=151');
   }
 
+  getPokemonById(id: number): Observable<Pokemon> {
+    console.log(this.apiUrl + id);
+    return this.http.get<Pokemon>(this.apiUrl + id);
+  }
+
   setPokemon(pokemon): void {    
     this.pokemonSeleccionado.next(pokemon);
   }
