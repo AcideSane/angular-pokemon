@@ -3,8 +3,8 @@
     <h1 style="font-size:25px;text-align:center"><b>{{pokemonSeleccionado.name |titlecase}}</b> </h1>
   </div>
   <div class="img">
-    <img src="{{pokemonSeleccionado.sprites.front_default}}" alt="sprites.front_default">
-    <img src="{{pokemonSeleccionado.sprites.front_shiny}}" alt="sprites.front_shiny">
+    <img src="{{pokemonSeleccionado.sprites.front_default}}" alt="sprites.front_default" >
+    <img src="{{pokemonSeleccionado.sprites.front_shiny}}" alt="sprites.front_shiny" >
   </div>
 
   <div class="type">
@@ -17,10 +17,14 @@
   </div>
 
   <div class="tp">
+    <div>
     <b>Tamanho :</b>
      {{pokemonSeleccionado.height*0.1 | number:'1.1'}} m
+    </div>
+    <div> 
     <b>Peso :</b>
     {{pokemonSeleccionado.weight*0.1 | number:'1.1'}} kg
+    </div>
   </div>
 
   <div class="stats">
@@ -32,6 +36,6 @@
     </ul>
   </div>
   <div class="btn">
-  <button onclick="history.back(-1)">Voltar</button>
+  <button class="btn btn-primary"onclick="history.back(-1)">Voltar</button>
   </div>
 </div>

@@ -17,6 +17,7 @@
 .img{
   grid-area: img;
   text-align: center;
+  background-color: rgba(0, 217, 255, 0.253);
 }
 
 .type{
