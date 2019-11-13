@@ -11,11 +11,18 @@ export class Pokemon {
   height: number;
   weight:number;
   stats:Array<Stats>;
+  types:Array<Stats>;
 }
 
 export class Stats{
   base_stat:number;
   stat:{
+    name:string,
+  }
+}
+
+export class Type{
+  type:{
     name:string,
   }
 }
