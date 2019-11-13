@@ -1,6 +1,17 @@
-<div>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=, initial-scale=">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title></title>
+</head>
+<body>
+	<div>
   <ul style="list-style-type:none">
     <li *ngFor="let pokemon of pokemons; index as id" style="text-align:justify;">
       <div>{{pokemon.url.split('/')[6]}} -<a  [title]="pokemon.name" [routerLink]="['/pokemons',id+1]" >{{pokemon.name|titlecase}}</a><br/></div>
   </ul>
 </div>
+</body>
+</html>
+

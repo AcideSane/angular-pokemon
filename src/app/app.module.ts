@@ -19,7 +19,7 @@ const routes: Routes = [
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule, RouterModule.forRoot(routes) ],
   declarations: [ AppComponent, HelloComponent, PokedexComponent, PokemonsComponent, PokemonsdetailsComponent ],
-  bootstrap:    [ AppComponent ],
+  bootstrap:    [ AppComponent,PokemonsdetailsComponent ],
   providers: [PokemonService],
   exports: [ RouterModule ]
 })
