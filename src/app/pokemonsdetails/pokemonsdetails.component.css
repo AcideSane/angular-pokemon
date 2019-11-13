@@ -1,0 +1,39 @@
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  " name name "
+  " img img"
+  " type type"
+  "tp stats"
+  "btn btn";
+}
+
+.name{
+  grid-area: name;
+}
+
+.img{
+  grid-area: img;
+  text-align: center;
+}
+
+.type{
+  grid-area: type;
+  text-align: center;
+}
+
+.tp{
+  grid-area: tp;
+}
+
+.stats{
+  grid-area: stats;
+}
+
+.btn{
+  grid-area: btn;
+  text-align: center;
+  padding: 25px;
+}

@@ -1,12 +1,13 @@
-<div *ngIf="pokemonSeleccionado">
-  <h1 style="font-size:25px;text-align:center"><b>{{pokemonSeleccionado.name |titlecase}}</b> </h1>
-
-  <div>
+<div *ngIf="pokemonSeleccionado" class="grid">
+  <div class="name"> 
+    <h1 style="font-size:25px;text-align:center"><b>{{pokemonSeleccionado.name |titlecase}}</b> </h1>
+  </div>
+  <div class="img">
     <img src="{{pokemonSeleccionado.sprites.front_default}}" alt="sprites.front_default">
     <img src="{{pokemonSeleccionado.sprites.front_shiny}}" alt="sprites.front_shiny">
   </div>
 
-  <div>
+  <div class="type">
     <b>Type :</b>
     <ul style="display:inline;list-style-type: none;">
       <li *ngFor="let type of pokemonSeleccionado.types" style="display:inline;">
@@ -15,17 +16,14 @@
     </ul>
   </div>
 
-  <div>
+  <div class="tp">
     <b>Tamanho :</b>
      {{pokemonSeleccionado.height*0.1 | number:'1.1'}} m
-  </div>
-
-  <div>
     <b>Peso :</b>
     {{pokemonSeleccionado.weight*0.1 | number:'1.1'}} kg
   </div>
 
-  <div>
+  <div class="stats">
   <b>Stats :</b>
     <ul style="display:inline;list-style-type: none;">
         <li *ngFor="let stat of pokemonSeleccionado.stats" >
@@ -33,6 +31,7 @@
         </li>
     </ul>
   </div>
+  <div class="btn">
   <button onclick="history.back(-1)">Voltar</button>
-
+  </div>
 </div>
