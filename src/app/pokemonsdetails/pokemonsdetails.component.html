@@ -1,28 +1,36 @@
 <div *ngIf="pokemonSeleccionado">
-  <p style="font-size:25px;text-align:center"><b>{{pokemonSeleccionado.name |titlecase}}</b> </p>
-    <p>
+  <h1 style="font-size:25px;text-align:center"><b>{{pokemonSeleccionado.name |titlecase}}</b> </h1>
+
+  <div>
     <img src="{{pokemonSeleccionado.sprites.front_default}}" alt="sprites.front_default">
     <img src="{{pokemonSeleccionado.sprites.front_shiny}}" alt="sprites.front_shiny">
-  </p>
+  </div>
+
+  <div>
     <b>Type :</b>
     <ul style="display:inline;list-style-type: none;">
       <li *ngFor="let type of pokemonSeleccionado.types" style="display:inline;">
         {{type.type.name}}
       </li>
     </ul>
-  <p>
+  </div>
+
+  <div>
     <b>Tamanho :</b>
      {{pokemonSeleccionado.height*0.1 | number:'1.1'}} m
-  </p>
-  <p>
+  </div>
+
+  <div>
     <b>Peso :</b>
     {{pokemonSeleccionado.weight*0.1 | number:'1.1'}} kg
-  </p>
-  <b>Stats :</b>
-  <ul style="display:inline;list-style-type: none;">
-      <li *ngFor="let stat of pokemonSeleccionado.stats" >
-        {{stat.stat.name}} = {{stat.base_stat}}
-      </li>
-    </ul>
+  </div>
 
+  <div>
+  <b>Stats :</b>
+    <ul style="display:inline;list-style-type: none;">
+        <li *ngFor="let stat of pokemonSeleccionado.stats" >
+          {{stat.stat.name}} = {{stat.base_stat}}
+        </li>
+    </ul>
+  </div>
 </div>

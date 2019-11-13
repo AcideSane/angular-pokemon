@@ -1,8 +1,6 @@
 <div>
-        <ul style="list-style-type:none">
-          <li *ngFor="let pokemon of pokemons; index as id" style="text-align:justify;">
-            <div>{{pokemon.url.split('/')[6]}} -<a  [title]="pokemon.name" [routerLink]="['/pokemons',id+1]" >{{pokemon.name|titlecase}}</a><br/></div>
-
-            <!-- [routerLink]="['/pokemons', id]" -->
-        </ul>
+  <ul style="list-style-type:none">
+    <li *ngFor="let pokemon of pokemons; index as id" style="text-align:justify;">
+      <div>{{pokemon.url.split('/')[6]}} -<a  [title]="pokemon.name" [routerLink]="['/pokemons',id+1]" >{{pokemon.name|titlecase}}</a><br/></div>
+  </ul>
 </div>
