@@ -54,3 +54,29 @@ body {
   padding: 50px;
   background: #e94b3cff; 
 }
+
+
+@media screen and (max-width: 736px){
+  .grid{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+    grid-template-areas: 
+    " stats img "
+    " tp type"
+    " button name";
+    
+  }
+  .stats{
+    grid-area: stats;
+    background: #e94b3cff; 
+    padding-left:25%;
+  }
+  .stats{
+  grid-area: stats;
+  background: #e94b3cff; 
+  
+}
+
+}
