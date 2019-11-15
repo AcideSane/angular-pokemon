@@ -5,12 +5,12 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<title></title>
 </head>
-<body class="container-fluid" style="background:  #e94b3cff; ">
+<body class="container-fluid">
   
 	<div class="row">
-  <ul class="col-md-12" style="list-style-type:none">
-    <li *ngFor="let pokemon of pokemons; index as id" style="text-align:justify;display:inline-block;padding-left:10px;padding-bottom:10px;margin-top:5px;">
-    <div  style="border:2px solid;border-color:#071872;border-radius:5px;padding:10px;background-image:linear-gradient(to bottom right, rgba(175,177,174,0.9), rgba(255,255,255,0.9),rgba(175,177,174,0.9))">
+  <ul class="col-md-12 lista" >
+    <li *ngFor="let pokemon of pokemons; index as id" >
+    <div class="pkmcard">
       <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{id+1}}.png" alt="sprites.front_default">
       <div>{{pokemon.url.split('/')[6]}}# <a  [title]="pokemon.name" [routerLink]="['/pokemons',id+1]" >{{pokemon.name|titlecase}}</a><br/></div>
     </div> 
