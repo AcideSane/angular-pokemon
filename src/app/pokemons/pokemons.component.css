@@ -21,3 +21,15 @@ li{
   padding:10px;
   background-image:linear-gradient(to bottom right, rgba(175,177,174,0.9), rgba(255,255,255,0.9),rgba(175,177,174,0.9));
 }
+
+.pgndiv{
+  text-align: center;
+  padding: 10px;
+}
+
+ .ngx-pagination a {
+  background: #071872;
+  color:white;
+  border: solid 1px white;
+}
+

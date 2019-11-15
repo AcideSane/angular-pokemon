@@ -8,14 +8,22 @@
 <body class="container-fluid">
   
 	<div class="row">
-  <ul class="col-md-12 lista" >
-    <li *ngFor="let pokemon of pokemons; index as id" >
-    <div class="pkmcard">
-      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{id+1}}.png" alt="sprites.front_default">
-      <div>{{pokemon.url.split('/')[6]}}# <a  [title]="pokemon.name" [routerLink]="['/pokemons',id+1]" >{{pokemon.name|titlecase}}</a><br/></div>
-    </div> 
-  </ul>
-</div>
+    <ul class="col-md-12 lista" >
+      <li *ngFor="let pokemon of pokemons | paginate: { itemsPerPage: 151,currentPage: page, totalItems: 807}" >
+      <div class="pkmcard">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{pokemon.url.split('/')[6]}}.png" alt="sprites.front_default">
+        <div>{{pokemon.url.split('/')[6]}}# <a  [title]="pokemon.name" [routerLink]="['/pokemons',pokemon.url.split('/')[6]]" >{{pokemon.name|titlecase}}</a><br/></div>
+      </div> 
+    </ul>
+  </div>
+  <div class="pgndiv">
+      <pagination-controls class="pgn" (pageChange)="page = $event" 
+                      directionLinks="true"
+                      autoHide="true"
+                      responsive="true"
+                      previousLabel="Anterior"
+                      nextLabel="Seguinte"></pagination-controls>
+  </div>
 </body>
 </html>
 
