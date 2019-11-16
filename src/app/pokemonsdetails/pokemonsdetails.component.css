@@ -55,6 +55,21 @@ body {
   background: #e94b3cff; 
 }
 
+.home:link, .home:visited {
+  background-color: #337ab7;
+  color: white;
+  font-weight: 400;
+  font-size:14px;
+  padding: 6px 12px;
+  text-align: center;
+  border-radius:4px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.home:hover, .home:active {
+  background-color: #2e6da4;
+}
 
 @media screen and (max-width: 736px){
   .grid{
